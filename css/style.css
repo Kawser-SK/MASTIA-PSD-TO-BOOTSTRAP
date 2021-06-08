@@ -210,7 +210,10 @@ button{
     font-size: 14px;
     font-weight: 400;
 }
-
+.about-item img{
+    width: 45px;
+    margin-bottom: 20px;
+}
 
 
 /*============= PROJECT STYLE HEAE ==============*/
@@ -546,6 +549,5 @@ footer li a:hover{
 .footer-bottom i{
     color: #ff0000;
 }
-
 
 
