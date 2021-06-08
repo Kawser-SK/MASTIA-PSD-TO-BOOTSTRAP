@@ -63,6 +63,9 @@ button{
    padding: 15px 0;
    font-size: 14px;
 }
+#top{
+    border-bottom: 2px solid #f5f5f5;
+}
 .header-address .nav li:first-child{
     font-family: 'Myriad';
 }
@@ -104,6 +107,17 @@ button{
 }       
 
 
+.nav-bg {
+    background-color: rgb(241 246 249) !important;
+}
+
+.nav-bg{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.sticky-top {
+    top: -1px !important;
+}
 /*============= BANNER STYLE HEAE ==============*/
 
 .carousel-caption {
@@ -127,7 +141,9 @@ button{
     padding: 12px 44px;
     z-index: 99;
 }
-
+.carousel-item {
+    height : 105vh;
+    }
 
 
 .banner-btn{
@@ -198,9 +214,9 @@ button{
 
 
 /*============= PROJECT STYLE HEAE ==============*/
-.project{
-    padding: 80px 0;
-    }
+.project {
+    padding: 80px 0 90px 0;
+}
     .project h2{
         font-family: 'Play', sans-serif;
         font-size: 35px;
@@ -220,17 +236,17 @@ button{
       left: 0;
       bottom: 0;
     }
-    .project-item{
+    .popup-item{
         width: 360px;
         height: 240px;
         position: relative;
     }
-    .project .project-item img{
+    .popup-item img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .project-item::before {
+    .popup-item::before {
         content: "";
         position: absolute;
         background: var(--primary);
@@ -240,7 +256,7 @@ button{
         transition: .4s;
         opacity: 0;
     }
-    .project-icon {
+    .popup-icon {
         position: absolute;
         top: 70%;
         left: 50%;
@@ -248,22 +264,74 @@ button{
         opacity: 0;
         transition: .6s;
     }
-    .project-icon i{
+    .popup-icon i{
        color: var(--white);
        font-size: 25px;
     }
 
-    .project-item:hover:before {
+    .popup-item:hover:before {
         opacity: .6;
     }
-    .project-item:hover .project-icon {
+    .popup-item:hover .popup-icon {
         top: 50%;
         opacity: 1;
      }
      
 
+     
 
+button.slick-prev.slick-arrow {
+    width: 30px;
+    background-color: #22a7f0;
+    position: absolute;
+    top: 115%;
+    left: 91%;
+    height: 27px;
+    transform: translate(45%, -50%);
+    transition: .3s;
+}
+button.slick-next.slick-arrow {
+    width: 30px;
+    background-color: #22a7f0;
+    position: absolute;
+    height: 29px;
+    top: 115%;
+    left: 94%;
+    height: 27px;
+    transform: translate(60%, -50%);
+    transition: .3s;
+}
+button.slick-next.slick-arrow::before {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff !important;
+    font-size: 17px !important;
+}
+button.slick-prev.slick-arrow::before{
+    font-weight: bold;
+    color: #fff !important;
+    font-size: 17px !important;
+}
+.slick-prev:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f053' !important;
 
+    
+}
+.slick-next:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f054' !important;
+    
+}
+img.mfp-img {
+    max-height: 250px;
+}
+
+/*=========== popup style hear ============*/
+
+.popup-section{
+    padding: 80px 0;
+}
 
 /*============= GET START STYLE HEAE ==============*/
     
@@ -295,9 +363,15 @@ button{
     }
 
 /*============= HAPPY CLIENT STYLE HEAE ==============*/
-.success{
-    background: var(--primary);
-    padding:50px 0 60px 0;
+.success {
+    padding: 50px 0 60px 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    background: linear-gradient(
+0deg
+, rgb(0 0 0 / 80%) 50%, rgb(0 0 0 / 80%) 50%), center url(../img/client-bg.jpg);
 }
 .success-item h2{
        font-family: 'Play', sans-serif;
@@ -351,6 +425,9 @@ button{
     background: var(--primary);
     left: 0;
     bottom: 0;
+}
+.blog-item{
+    margin: 0 15px;
 }
 .blog-item span{
     font-family: 'Open Sans', sans-serif;
@@ -471,10 +548,4 @@ footer li a:hover{
 }
 
 
-/*
- font-family: 'Play', sans-serif;
-
-font-family: 'Raleway', sans-serif; 
-
-*/
 
