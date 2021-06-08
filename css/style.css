@@ -1,0 +1,480 @@
+/* =====================================
+    Template Name: MASTIA || PSD TO HTML
+    Author: Kawser_sk
+    Version: 1.0.0
+    Created:5-6-2021
+    File Descrciption: Main file of the Template
+===================================== */
+
+/*========= Font link =========*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Play:wght@400;700&family=Raleway:wght@600&display=swap');
+
+
+/*============= Default CSS ============*/
+@font-face {
+    font-family: 'Myriad';
+    src: url(../font/Myriad\ Pro\ Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    --primary: #22a7f0;
+    --text: #353535;
+    --black: #000;
+    --white: #fff;
+    --primary-font:'Open Sans', sans-serif;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 1140px;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+p{
+    margin-bottom: 0;
+}
+button{
+    cursor: pointer;
+}
+
+/*============= HEADER STYLE HEAE ==============*/
+
+
+        /* HEADER TOP */
+
+.header-top{
+   padding: 15px 0;
+   font-size: 14px;
+}
+.header-address .nav li:first-child{
+    font-family: 'Myriad';
+}
+.header-icon i{
+    color: #4b4b4b;
+    margin-right: 20px;
+}
+.header-icon i:hover{
+    color: var(--primary);
+}
+.header-address{
+    padding-right: 8px;
+    color: var(--text);
+}
+.header-address li{
+    margin-left: 38px;
+}
+.header-address i{
+    margin-right: 10px;
+}
+
+        /* MAIN HEADER */
+.navbar{
+    background: var(--white);
+}
+.navbar .navbar-nav li{
+    margin-left: 25px;
+}        
+.navbar .navbar-nav li a{
+    color: #4b4b4b !important;
+    text-transform: uppercase;
+    font-size: 14px;
+}        
+.navbar-nav .nav-item .nav-link.active{
+    color: var(--primary) !important;
+}       
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--primary) !important;
+}       
+
+
+/*============= BANNER STYLE HEAE ==============*/
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+.carousel-caption p{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.carousel-item h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    z-index: 99;
+}
+.carousel-item a{
+    padding: 12px 44px;
+    z-index: 99;
+}
+
+
+
+.banner-btn{
+    font-family: 'Play', sans-serif;
+    border: 1px solid var(--white);
+    border-radius: 0;
+    color: var(--white);
+    margin-top: 30px;
+    transition: .3s;
+}
+.banner-btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+.banner-btn:hover{
+    color: var(--white);
+    background: var(--primary) !important;
+    border: 1px solid var(--primary);
+}
+
+.carousel-control-prev i{
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 30px;
+    border: 1px solid var(--white);
+
+}
+.carousel-control-next i{
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 30px;
+    border: 1px solid var(--white);
+
+}
+
+
+/*============= ABOUT STYLE HEAE ==============*/
+.about{
+    padding: 70px 0 10px 0;
+    background: #f8f8f8;
+}
+.about-item{
+    padding: 5px;
+}
+.about-item i{
+    font-size: 50px;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+}
+.about-item {
+    margin-bottom: 60px;
+}
+.about-item h2{
+    font-family: 'Play', sans-serif;
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.about-item p{
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+/*============= PROJECT STYLE HEAE ==============*/
+.project{
+    padding: 80px 0;
+    }
+    .project h2{
+        font-family: 'Play', sans-serif;
+        font-size: 35px;
+        font-weight: 400;
+        color: var(--primary);
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 25px;
+        padding-bottom: 17px;
+    }
+    .project h2::after{
+      position: absolute;
+      content: "";
+      width: 70px;
+      height: 2px;
+      background: var(--primary);
+      left: 0;
+      bottom: 0;
+    }
+    .project-item{
+        width: 360px;
+        height: 240px;
+        position: relative;
+    }
+    .project .project-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .project-item::before {
+        content: "";
+        position: absolute;
+        background: var(--primary);
+        height: 100%;
+        width: 100%;
+        display: block;
+        transition: .4s;
+        opacity: 0;
+    }
+    .project-icon {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .6s;
+    }
+    .project-icon i{
+       color: var(--white);
+       font-size: 25px;
+    }
+
+    .project-item:hover:before {
+        opacity: .6;
+    }
+    .project-item:hover .project-icon {
+        top: 50%;
+        opacity: 1;
+     }
+     
+
+
+
+
+/*============= GET START STYLE HEAE ==============*/
+    
+    
+    .get{
+        background: var(--primary);
+        padding: 38px 0;
+    }
+    .get-in-touch p{
+        font-family: 'Play', sans-serif;
+        color: var(--white);
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .get-in-touch button{
+        font-family: 'Play', sans-serif;
+        font-size: 14px;
+        border: 1px solid var(--white);
+        border-radius: 0;
+        color: var(--white);
+        transition: .3s;
+        padding: 12px 42px;
+        background: transparent;
+    }
+    .get-in-touch button:hover{
+        color: var(--white);
+        background: var(--text) !important;
+        border: 1px solid var(--primary);
+    }
+
+/*============= HAPPY CLIENT STYLE HEAE ==============*/
+.success{
+    background: var(--primary);
+    padding:50px 0 60px 0;
+}
+.success-item h2{
+       font-family: 'Play', sans-serif;
+       font-size: 50px;
+       color: var(--white);
+       font-weight: 700;
+       position: relative;
+       margin-bottom: 15px;
+    padding-bottom: 15px;
+
+}
+.success-item h2::after{
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: var(--white);
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+
+}
+.success-item h3{
+       font-family: 'Play', sans-serif;
+       font-size: 26px;
+       color: var(--white);
+       font-weight: 400;
+
+}
+
+
+/*============= BLOG STYLE HEAE ==============*/
+.blog{
+    padding: 80px 0 120px 0;
+}
+.blog h2{
+    font-family: 'Play', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--primary);
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 17px;
+}
+.blog h2::after{
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: var(--primary);
+    left: 0;
+    bottom: 0;
+}
+.blog-item span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 5px;
+    display: block;
+}
+.blog-item p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 25px;
+}
+.blog-img img{
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
+}
+.blog-item .blog-content{
+    background: #f8f8f8;
+    padding: 30px 20px;
+}
+
+.blog-content .btn{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border: none;
+    margin-top: 35px;
+    text-align: right;
+    outline: 0;
+    box-shadow: none;
+    margin-left: 192px;
+    padding: 0;
+}
+
+.blog-icon {
+    margin-top: 18px;
+}
+.blog-icon i{
+   color: var(--white);
+}
+.blog-icon .blog-icon-left {
+    width: 25px;
+    height: 25px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.blog-icon .blog-icon-right{
+    width: 25px;
+    height: 25px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer;
+    
+}
+
+
+
+/*============= FOOETR STYLE HEAE ==============*/
+footer{
+    background: #161616;
+    padding: 55px 0;
+    color: var(--white);
+}
+footer h3{
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-weight: 700;
+
+}
+footer i{
+   color: var(--primary);
+   margin-right: 10px;
+
+}
+footer p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+
+}
+footer li a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    transition: .3s;
+    line-height: 18px;
+}
+footer li a:hover{
+    color: var(--primary);
+}
+.footer-bottom{
+    color: var(--white);
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 35px 0;
+    background: #000;
+    line-height: 0;
+}
+.footer-bottom i{
+    color: #ff0000;
+}
+
+
+/*
+ font-family: 'Play', sans-serif;
+
+font-family: 'Raleway', sans-serif; 
+
+*/
+
